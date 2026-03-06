@@ -13,14 +13,29 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class FakeEntityFactoryImpl implements FakeEntityFactory {
 
     private static final AtomicInteger ENTITY_COUNTER = new AtomicInteger(0);
+    private static final boolean USE_FALLBACK;
 
     static {
+        boolean fallback;
         try {
             Field counterField = Entity.class.getDeclaredField("ENTITY_COUNTER");
             counterField.setAccessible(true);
-            ENTITY_COUNTER = (AtomicInteger) counterField.get(null);
+            AtomicInteger nmsCounter = (AtomicInteger) counterField.get(null);
+            // Replace our counter with the NMS one if accessible
+            try {
+                Field counterField2 = FakeEntityFactoryImpl.class.getDeclaredField("ENTITY_COUNTER");
+                counterField2.setAccessible(true);
+                counterField2.set(null, nmsCounter);
+                fallback = false;
+            } catch (Exception e) {
+                fallback = true;
+            }
         } catch (ReflectiveOperationException e) {
-            throw new ExceptionInInitializerError("Failed to access Entity.ENTITY_COUNTER: " + e.getMessage());
+            fallback = true;
+        }
+        USE_FALLBACK = fallback;
+        if (USE_FALLBACK) {
+            System.out.println("[Dominion] Using fallback entity counter (Folia detected)");
         }
     }
 

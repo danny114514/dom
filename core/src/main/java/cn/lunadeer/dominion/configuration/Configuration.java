@@ -144,7 +144,7 @@ public class Configuration extends ConfigurationFile {
     }
 
     @Comments("Language of the plugin, see others in the plugins/Dominion/languages folder.")
-    public static String language = "en_us";
+    public static String language = "zh_cn";
 
     @Comments("Radius of the auto create dominion. -1 to disable.")
     public static int autoCreateRadius = 10;

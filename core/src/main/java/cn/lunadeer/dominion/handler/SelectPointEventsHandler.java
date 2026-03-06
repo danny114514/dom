@@ -27,7 +27,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static cn.lunadeer.dominion.misc.Others.sortLocations;
-import static cn.lunadeer.dominion.utils.BorderRenderUtil.DEFAULT_GLOW_COLOR;
 
 
 public class SelectPointEventsHandler implements Listener {
@@ -111,7 +110,7 @@ public class SelectPointEventsHandler implements Listener {
                     double price = amount * Configuration.getPlayerLimitation(player).economy.pricePerBlock;
                     Notification.info(player, Language.selectPointEventsHandlerText.price, price, VaultConnect.instance.currencyNamePlural());
                 }
-                BorderRenderUtil.showBorder(player, points.get(0).getWorld(), cuboid, DEFAULT_GLOW_COLOR);
+                BorderRenderUtil.showBorder(player, points.get(0).getWorld(), cuboid);
                 Notification.info(player, Language.selectPointEventsHandlerText.size, cuboid.xLength(), cuboid.yLength(), cuboid.zLength());
                 Notification.info(player, Language.selectPointEventsHandlerText.square, cuboid.getSquare());
                 Notification.info(player, Language.selectPointEventsHandlerText.volume, cuboid.getVolume());
