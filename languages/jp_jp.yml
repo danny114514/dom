@@ -343,9 +343,6 @@ flags:
   place:
     display-name: ブロック設置
     description: ブロックを設置できるかどうか (通常のブロック、アイテムフレーム、溶岩、水を含む)。
-  fly:
-    display-name: 飛行
-    description: エリトラによる飛行ではなく、クリエイティブモードのような飛行です。
   honey:
     display-name: ハチミツ
     description: ハチの巣と相互作用できるかどうか (ハチミツを取得するため)。

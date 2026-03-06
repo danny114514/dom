@@ -343,12 +343,9 @@ flags:
   place:
     display-name: Place Block
     description: Whether can place blocks (normal blocks, item frame, lava, water).
-  fly:
-    display-name: Fly
-    description: NOT elytra fly, it's like creative mode fly.
   honey:
-    display-name: Honey
-    description: Whether can interact with hive (to get honey).
+    display-name: Honey Comb Interaction
+    description: Whether can harvest honeyinteract with hive (to get honey).
   monster_damage:
     display-name: Monster Kill Player
     description: Whether monster can do harm to player.

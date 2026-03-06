@@ -41,7 +41,6 @@ public class EventsRegister {
         new MemberProviderHandler(plugin);
         new GroupProviderHandler(plugin);
         new SelectPointEventsHandler(plugin);
-        new FlyGlowCheckHandler(plugin);
         new FlagRegisterHandler(plugin);
     }
 

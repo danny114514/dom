@@ -293,9 +293,6 @@ flags:
   place:
     display-name: 放置方块
     description: 是否可以放置方块（包括：一般方块、展示框、岩浆、水）
-  fly:
-    display-name: 飞行
-    description: 不是翅鞘飞行，是类似于创造模式的飞行
   honey:
     display-name: 蜂巢交互
     description: 是否可以采蜂蜜

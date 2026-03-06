@@ -374,12 +374,9 @@ flags:
   place:
     display-name: 放置方塊
     description: 是否允許放置方塊(正常方塊、物品展示框、岩漿、水等)
-  fly:
-    display-name: 飛行
-    description: 創造模式飛行，不是鞘翅
   honey:
     display-name: 取蜂蜜
-    description: 是否允許操作蜂巢(取得蜂蜜)
+    description: 是否允許操作蜂巢 (取得蜂蜜)
   monster_damage:
     display-name: 怪物傷人
     description: 是否允許怪物傷害玩家

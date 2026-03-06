@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class FakeEntityFactoryImpl implements FakeEntityFactory {
 
-    private static final AtomicInteger ENTITY_COUNTER;
+    private static final AtomicInteger ENTITY_COUNTER = new AtomicInteger(0);
 
     static {
         try {
