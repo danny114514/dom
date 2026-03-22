@@ -1,0 +1,22 @@
+name: Dominion
+version: 4.7.2-beta
+main: cn.lunadeer.dominion.Dominion
+api-version: '1.20'
+folia-supported: true
+libraries: [ ]
+softdepend:
+  - Vault
+  - PlaceholderAPI
+  - WorldGuard
+commands:
+  dominion:
+    description: Dominion plugin command
+    usage: /dominion <cmd>
+    aliases: [ dominion, dom ]
+permissions:
+  dominion.admin:
+    description: Administrator permissions for Dominion plugin
+    default: op
+  dominion.default:
+    description: Default user permissions for Dominion plugin
+    default: true
